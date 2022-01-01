@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_clear_24"
+                android:onClick="clear"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_exposure_neg_1_24"
+                android:onClick="minus"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_exposure_plus_1_24"
+                android:onClick="plus"
+                />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:onClick="black"
+                />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:onClick="white"
+                />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/red"
+                android:onClick="red"
+                />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/blue"
+                android:onClick="blue"
+                />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/green"
+                android:onClick="green"
+                />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/yellow"
+                android:onClick="yellow"
+                />
+        </LinearLayout>
+
+
+
+
+        <view class="com.example.megabibibu.MainActivity$MyDraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
