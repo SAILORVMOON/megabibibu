@@ -60,20 +60,20 @@ public class MainActivity extends Activity {
             float y = motionEvent.getY();
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    path.moveTo(x, y);
-                    return true;
-                case MotionEvent.ACTION_MOVE:
-                    path.lineTo(x, y);
-                    paths.add(path);
+                    path = new Path();
                     ris = new Paint();
+                    path.moveTo(x, y);
+                    paths.add(path);
                     ris.setStyle(Paint.Style.STROKE);
                     ris.setColor(p.getColor());
                     ris.setStrokeWidth(p.getStrokeWidth());
                     paints.add(ris);
                     invalidate();
                     return true;
-                case MotionEvent.ACTION_UP:
-                    path = new Path();
+                case MotionEvent.ACTION_MOVE:
+                    path.lineTo(x, y);
+                    invalidate();
+                    return true;
                 default:
                     return false;
             }
